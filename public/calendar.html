@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Kalender</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <a href="index.html">Startseite</a>
+        <a href="events.html">Events</a>
+        <a href="calendar.html">Kalender</a>
+        <a href="impressum.html">Impressum</a>
+    </nav>
+    <div class="container">
+        <div class="header">
+            <h1>🗓️ Event Kalender</h1>
+            <p>Alle Ihre Events auf einen Blick</p>
+        </div>
+
+        <div class="calendar-nav">
+            <button class="nav-btn" onclick="previousMonth()">
+                ← Vorheriger Monat
+            </button>
+            <div class="current-month" id="currentMonth"></div>
+            <button class="nav-btn" onclick="nextMonth()">
+                Nächster Monat →
+            </button>
+        </div>
+
+        <div class="legend">
+            <div class="legend-item">
+                <div class="legend-color" style="background: linear-gradient(135deg, #4f46e5, #7c3aed);"></div>
+                <span>Standard</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background: linear-gradient(135deg, #059669, #047857);"></div>
+                <span>Arbeit</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background: linear-gradient(135deg, #dc2626, #b91c1c);"></div>
+                <span>Privat</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background: linear-gradient(135deg, #ea580c, #c2410c);"></div>
+                <span>Meeting</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background: linear-gradient(135deg, #e879f9, #c084fc);"></div>
+                <span>Geburtstag</span>
+            </div>
+        </div>
+
+        <div id="calendar" class="calendar-grid">
+            <div class="loading">Kalender wird geladen...</div>
+        </div>
+    </div>
+
+    <!-- Event Detail Modal -->
+    <div id="eventModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div id="eventDetails"></div>
+        </div>
+    </div>
+
+    <script src="calendar.js"></script>
+</body>
+</html>

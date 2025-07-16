@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Eventplaner – Startseite</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav>
+    <a href="index.html">Startseite</a>
+    <a href="events.html">Events</a>
+    <a href="calendar.html">Kalender</a>
+    <a href="impressum.html">Impressum</a>
+  </nav>
+  <main>
+    <h1>Willkommen beim Eventplaner!</h1>
+    <p>
+      Organisiere, finde und teile Events aller Art.<br>
+      <b>Features:</b> Tags, Filter, Suchfunktion, Eventdetails und mehr!
+    </p>
+    <button id="goToEvents">Zu den Events</button>
+  </main>
+  <script>
+    document.getElementById("goToEvents").onclick = () => location.href = "events.html";
+  </script>
+</body>
+</html>

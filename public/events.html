@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Eventplaner – Events</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav>
+    <a href="index.html">Startseite</a>
+    <a href="events.html">Events</a>
+    <a href="calendar.html">Kalender</a>
+    <a href="impressum.html">Impressum</a>
+  </nav>
+  <main>
+    <h1>Events</h1>
+    <section class="event-form-section">
+      <form id="eventForm">
+        <input type="text" id="eventName" placeholder="Eventname*" required>
+        <input type="date" id="eventDate" required>
+        <input type="text" id="eventLocation" placeholder="Ort">
+        <select id="tag" name="Tag">
+          <option value="Standard">Standard</option>
+          <option value="Arbeit">Arbeit</option>
+          <option value="Privat">Privat</option>
+          <option value="Meeting">Meeting</option>
+          <option value="Geburtstag">Geburtstag</option>
+        </select>
+        <textarea id="eventDescription" placeholder="Beschreibung"></textarea>
+        <button type="submit">Event hinzufügen</button>
+        <span id="formHelp"></span>
+      </form>
+    </section>
+    <section class="event-filter-section">
+      <input type="text" id="searchInput" placeholder="Suchen...">
+      <select id="tagFilter">
+        <option value="">Alle Tags</option>
+      </select>
+      <input type="date" id="dateFilter">
+      <button id="resetFilters">Filter zurücksetzen</button>
+    </section>
+    <ul id="eventList"></ul>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
